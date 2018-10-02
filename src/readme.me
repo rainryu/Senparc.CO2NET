@@ -3,7 +3,10 @@
 严重性	代码	说明	项目	文件	行	禁止显示状态
 错误		项目“..\..\src\Senparc.CO2NET.Cache.Redis\Senparc.CO2NET.Cache.Redis.csproj”指向“netcoreapp2.1”。它不能被指向“.NETFramework,Version=v4.5”的项目引用。	Senparc.CO2NET.Sample.net45			
 
-
+解决方法1：
 可以编辑项目.csproj文件的以下结点
  <TargetFrameworks>net45;netstandard2.0;netcoreapp2.0;netcoreapp2.1</TargetFrameworks>
 行仅保留需要的目标框架，再生成即可，
+
+解决方法2：
+在解决方案中仅保留需要的Samples版本，不需要的暂时卸载项目
